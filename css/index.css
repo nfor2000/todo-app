@@ -1,0 +1,211 @@
+:root {
+     font-family: "Epilogue", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 500;
+     font-style: normal;
+     opacity: 0.9;
+}
+
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+button,
+input {
+     outline: 0;
+     border: 0;
+     background-color: transparent;
+}
+
+body {
+     background-image: linear-gradient(120deg, orange, orange, orangered);
+     background-repeat: no-repeat;
+     min-height: 100vh;
+}
+
+header {
+     text-align: center;
+     color: #fff;
+     font-size: 25px;
+     padding: 40px;
+}
+
+.container {
+     width: 100%;
+     max-width: 820px;
+     margin: auto;
+}
+
+main {
+     padding: 40px;
+}
+
+main .form-container {
+     width: 768px;
+     margin: auto;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+}
+
+.form-input {
+     display: flex;
+     width: 360px;
+     background-color: #fff;
+     padding: 10px;
+     height: 50px;
+}
+
+.form-input input {
+     flex: 1;
+     padding: 5px 20px;
+     font-size: 18px;
+}
+
+form button {
+     background-color: orangered;
+     font-size: 20px;
+     color: #fff;
+     padding: 5px 10px;
+     border-radius: 5px;
+}
+
+select::backdrop {
+     background-color: orange;
+}
+
+.filter {
+     position: relative;
+     display: flex;
+     align-items: center;
+     width: 200px;
+     height: 50px;
+     z-index: 1;
+}
+
+.filter-option-chosen {
+     font-size: 18px;
+     background-color: #fff;
+     flex: 1;
+     height: 100%;
+     line-height: 50px;
+     padding-inline: 20px;
+     color: tomato;
+}
+
+.filter-select {
+     position: absolute;
+     background-color: #fff;
+     top: 40px;
+     width: 150px;
+     color: tomato;
+     transition: .1s linear;
+     height: 0;
+     transform-origin: top center;
+     overflow-y: hidden;
+}
+
+
+.filter-option {
+     padding: 5px;
+     display: block;
+     color: tomato;
+     width: 100%;
+     text-align: left;
+}
+
+.filter-select.active {
+     height: auto;
+     padding: 10px;
+}
+
+#filter-btn {
+     font-size: 25px;
+     height: 100%;
+     background-color: orangered;
+     font-size: 30px;
+     color: #fff;
+     width: 50px;
+     cursor: pointer;
+}
+
+.todo-container {
+     width: 360px;
+     margin: auto;
+     padding-block: 60px;
+}
+
+.todo {
+     display: flex;
+     align-items: center;
+     margin-bottom: 10px;
+}
+
+.todo :is(p, .fa, del) {
+     height: 50px;
+     line-height: 50px;
+}
+
+.todo :is(.text, del) {
+     background-color: #fff;
+     flex: 1;
+     padding-inline: 20px;
+     font-size: 20px;
+     font-weight: 700;
+}
+
+.todo del {
+     color: #999999;
+}
+
+.todo .fa {
+     width: 50px;
+     text-align: center;
+     font-size: 25px;
+     color: #fff;
+     cursor: pointer;
+}
+
+.fa-trash {
+     background-color: tomato;
+}
+
+.fa-check {
+     background-color: rgb(65, 176, 65);
+}
+
+button {
+     cursor: pointer;
+}
+
+@media screen and (max-width: 540px) {
+     
+     header {
+          font-size: 20px;
+     }
+
+     main {
+          padding: 20px;
+     }
+
+     main .form-container {
+          display: block;
+          width: 100%;
+     }
+
+
+     .form-container form {
+          display: block;
+          width: 100%;
+          margin-bottom: 10px;
+     }
+
+     .todo-container {
+          width: 100%;
+     }
+
+
+}
